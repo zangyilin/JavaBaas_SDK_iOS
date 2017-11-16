@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JBConstants.h"
 #import "JBUser.h"
 
 @interface JBCacheManager : NSObject

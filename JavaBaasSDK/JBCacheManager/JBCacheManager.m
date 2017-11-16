@@ -9,6 +9,7 @@
 #import "JBCacheManager.h"
 #import "NSString+MD5Digest.h"
 #import "JBObject.h"
+#import "JBConstants.h"
 
 
 #define JBCachePath @"JavaBaas/JBCachePath"

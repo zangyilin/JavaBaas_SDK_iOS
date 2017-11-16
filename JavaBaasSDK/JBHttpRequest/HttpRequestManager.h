@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 #import "JBResponse.h"
 
 
@@ -18,7 +18,6 @@
 /**
  *  创建对象
  *
- *  @param clazzName  表名
  *  @param parameters 创建数据 NSDictionary
  */
 + (void)postObjectWithoutDataWithUrlPath:(NSString *)urlPath parameters:(NSDictionary *)parameters
@@ -28,8 +27,6 @@
 /**
  *  获取一个对象的数据
  *
- *  @param clazzName  表名
- *  @param objectId   数据对应id
  *  @param parameters 查询条件
  *  @param success    成功
  *  @param failure    失败
@@ -39,13 +36,6 @@
                        failure:(void (^)(JBResponse *jbResponse, NSError *error))failure;
 
 
-/**
- *  更新对象
- *
- *  @param className 表名
- *  @param objectId  对象id
- *  @param dict      更新数据 NSDictionary
- */
 + (void)updateObjectWithUrlPath:(NSString *)urlPath parameters:(NSDictionary *)dict
                           success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                           failure:(void (^)(JBResponse *jbResponse, NSError *error))failure;
@@ -53,30 +43,17 @@
 /**
  *  查询
  *
- *  @param clazzName 表名
- *  @param queryString      where条件
  */
 + (void)queryObjectWithUrlPath:(NSString *)urlPath queryParam:(NSMutableDictionary *)queryDict
                          success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                          failure:(void (^)(JBResponse *jbResponse, NSError *error))failure;
 
 
-/**
- *  删除对象
- *
- *  @param clazzName 表名
- *  @param objectId  对象id
- */
 + (void)deleteObjectWithUrlPath:(NSString *)urlPath queryParam:(NSMutableDictionary *)queryDict
                           success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                           failure:(void (^)(JBResponse *jbResponse, NSError *error))failure;
 
-/**
- *  发起post请求
- *
- *  @param urlString  url
- *  @param parameters
- */
+
 + (void)postObjectWithUrlString:(NSString *)urlString parameters:(NSDictionary *)parameters
                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                         failure:(void (^)(JBResponse *jbResponse, NSError *error))failure;
@@ -121,7 +98,6 @@
  *
  *  @param method     GET/POST/PUT/DELETE
  *  @param urlString  URL
- *  @param parameters
  *  @param error      ERROR信息
  *
  */
