@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "JavaBaasSDK/*.{h,m}"
+  s.source_files  = "JavaBaasSDK","JavaBaasSDK/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -116,10 +116,11 @@ Pod::Spec.new do |s|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-s.vendored_frameworks = 'JavaBaasSDK.framework'
-s.requires_arc = true
 
-s.framework  = "Foundation"
+  s.framework  = "UIKit", "Foundation"
+  s.dependency "Qiniu"
+  s.dependency "HappyDNS"
+  s.dependency "AFNetworking"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"

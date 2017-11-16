@@ -16,11 +16,14 @@ FOUNDATION_EXPORT const unsigned char JavaBaasSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <JavaBaasSDK/PublicHeader.h>
 
-#import <JBObject/JBObject.h>
-#import <JBObject/JBUser.h>
-#import <JBObject/JBFile.h>
-#import <JBObject/JBCloud.h>
-#import <JBQuery/JBQuery.h>
-#import <JBInstallation/JBInstallation.h>
-#import <JBConfig/JBOSCloud.h>
-#import <JBACL/JBACL.h>
+##ifndef JavaBaasSDK_h
+#define JavaBaasSDK_h
+#import "JBObject.h"
+#import "JBUser.h"
+#import "JBFile.h"
+#import "JBCloud.h"
+#import "JBQuery.h"
+#import "JBOSCloud.h"
+#import "JBInstallation.h"
+
+#endif /* JavaBaasSDK_h */
